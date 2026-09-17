@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Job Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+  <main class="login-card">
+    <div class="login-icon">💼</div>
+
+    <h1>Welcome Back!</h1>
+    <p class="login-text">
+      Sign in to manage your internships and job applications.
+    </p>
+
+    <form id="login-form">
+      <label for="email">Email address</label>
+      <input
+        id="email"
+        type="email"
+        placeholder=""
+        required
+      >
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        placeholder=""
+        required
+      >
+
+      <a href="forgot-password.html" id="forgot-password" class="forgot-link">
+        Forgot password?
+      </a>
+
+      <button type="submit">Sign In →</button>
+    </form>
+
+    <p class="create-account">
+      New to Job Tracker?
+      <a href="signup.html" id="create-account">Create an account</a>
+    </p>
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

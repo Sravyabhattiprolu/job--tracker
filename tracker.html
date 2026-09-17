@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Tracker Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="tracker.html">📊 Dashboard</a>
+    <a href="jobs.html">🔎 Find Jobs</a>
+    <a href="applications.html">📁 My Applications</a>
+    <button id="logout-button">Logout</button>
+  </nav>
+
+  <main class="tracker-card">
+    <section class="left-side">
+      <header>
+        <p class="logo">💼</p>
+
+        <h1>Hello, <span id="welcome-name">Student</span> 👋</h1>
+
+        <p class="subtitle">
+          Use this app to track the jobs and internships you apply for.
+        </p>
+      </header>
+
+      <h2>🌐 Add a new application</h2>
+
+      <form id="job-form">
+        <label for="company">🏢 Company name:</label>
+        <input type="text" id="company" placeholder="Example: Google">
+
+        <label for="role">👤 Role:</label>
+        <input type="text" id="role" placeholder="Example: DevOps Intern">
+
+        <label for="status">📊 Application status:</label>
+        <select id="status">
+          <option>Applied</option>
+          <option>Interviewing</option>
+          <option>Offer received</option>
+          <option>Rejected</option>
+        </select>
+
+        <button type="submit">✈ Add Application</button>
+      </form>
+
+      <h2>📁 My applications</h2>
+
+      <div id="application-list">
+        <p class="empty-message">📄 No applications added yet.</p>
+      </div>
+    </section>
+
+    <aside class="right-side">
+      <div class="bubble bubble-one">🎓</div>
+      <div class="bubble bubble-two">💼</div>
+      <div class="bubble bubble-three">📈</div>
+
+      <p class="quote">Small Steps<br>Big Goals ♡</p>
+      <p class="checklist">✓ Apply<br>✓ Track<br>✓ Get Hired</p>
+
+      <div class="illustration">
+        <div class="hair"></div>
+        <div class="face">😊</div>
+        <div class="body"></div>
+        <div class="laptop">♡</div>
+        <div class="books">Learn ♥<br>Grow ♥<br>Achieve ♥</div>
+      </div>
+
+      <div class="plant">🌿</div>
+      <div class="notebook">☑ Internships<br>☑ Jobs<br>☑ Career Goals</div>
+    </aside>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
