@@ -1,0 +1,31 @@
+name: Job Tracker CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t job-tracker .
+
+      - name: Run Docker container
+        run: docker run -d -p 8080:80 --name job-tracker-container job-tracker
+
+      - name: Test application
+        run: |
+          sleep 5
+          curl --fail http://localhost:8080
+
+      - name: Stop Docker container
+        run: docker stop job-tracker-container
