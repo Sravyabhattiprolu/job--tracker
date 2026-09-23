@@ -28,4 +28,5 @@ jobs:
           curl --fail http://localhost:8080
 
       - name: Stop Docker container
+        if: always()
         run: docker stop job-tracker-container
